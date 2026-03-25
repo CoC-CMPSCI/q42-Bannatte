@@ -14,7 +14,7 @@ int main()
     cin >> weight >> distance;
 
     if (distance < 10 || distance > 3000 || weight <=0 || weight > 20) {
-        cout << "Wrong input" << endl;
+        cout << "Invalid input" << endl;
     }
 
     if (weight <= 2) {
