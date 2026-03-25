@@ -14,10 +14,26 @@ int main()
     cout << "Enter the package weight and distance: ";
     cin >> weight >> distance;
 
-    // TODO
+    if (distance < 10 || distance > 3000 || weight <=0 || weight > 20) {
+        cout << "Wrong Input" << endl;
+    }
 
-    cout << setw(10) << left << setprecision(2) << fixed;
-    cout << total_charge << endl;
+    if (weight <= 2) {
+        rate = rate1;
+    } else if (weight <= 6) {
+        rate = rate2;
+    } else if (weight <= 10) {
+        rate = rate3;
+    } else {
+        rate = rate4;
+    }
 
+    if (distance >= 500) {
+        total_charge = rate * (distance / 500.0);
+    } else {
+        total_charge = rate;
+    }
+
+    cout << fixed << setprecision(2) << total_charge << endl;
     return 0;
 }
