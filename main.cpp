@@ -11,7 +11,6 @@ int main()
     double total_charge;
     double weight, distance, rate;
 
-    cout << "Enter the package weight and distance: ";
     cin >> weight >> distance;
 
     if (distance < 10 || distance > 3000 || weight <=0 || weight > 20) {
